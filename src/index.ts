@@ -2,34 +2,23 @@
     ===== Código de TypeScript =====
 */
 
-interface Reproductor{
-    volumen: number,
-    segundo: number,
-    cancion: string,
-    detalles: Detalles
+
+class Heroe{
+    //metodo 1
+    /*
+    alterEgo:string;
+    edad:number;
+    nombreReal:number;
+    */
+
+    //metodo 2 usando constructor
+    constructor(
+        public alterEgo:string,
+        public edad:number,
+        public nombreReal:string
+    ){}
 }
 
-interface Detalles{
-    author: string,
-    anio: number
-}
 
-const reproductor: Reproductor = {
-    volumen: 90,
-    segundo: 48,
-    cancion: "Somethin about us",
-    detalles: {
-        author: "Daft punk",
-        anio: 2000
-    }
-}
-
-const {volumen, segundo, cancion, detalles} = reproductor;
-const {author} = detalles;
-
-console.log("El volumen es: ", volumen);
-console.log("El segundo es: ", segundo);
-console.log("La cancion es: ", cancion);
-console.log("El author es: ", author );
-
-//segunda parte de la clase
+const ironMan = new Heroe("ironMan", 45, "Tony");
+console.log(ironMan);
